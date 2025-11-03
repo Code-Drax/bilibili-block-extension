@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Bilibili Cookie Reader",
+  "version": "1.0.0",
+  "description": "读取并显示 Bilibili 网站的所有 Cookie 信息(包括 HttpOnly)",
+  "permissions": [
+    "cookies",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.bilibili.com/*",
+    "*://api.bilibili.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.bilibili.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-128.svg",
+      "48": "icons/icon-128.svg",
+      "128": "icons/icon-128.svg"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-128.svg",
+    "48": "icons/icon-128.svg",
+    "128": "icons/icon-128.svg"
+  }
+}

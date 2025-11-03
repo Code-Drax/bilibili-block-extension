@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilibili Cookie Reader</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部标题 -->
+        <header class="header">
+            <h1>🍪 Bilibili 助手</h1>
+            <p class="subtitle">Cookie 管理 & 批量拉黑工具</p>
+        </header>
+
+        <!-- 统计信息 -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">总数:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">HttpOnly:</span>
+                <span class="stat-value" id="httpOnlyCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Secure:</span>
+                <span class="stat-value" id="secureCount">0</span>
+            </div>
+        </div>
+
+        <!-- Tab 选项卡 -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="single">🔨 单个测试</button>
+            <button class="tab-btn" data-tab="batch">📦 批量操作</button>
+            <button class="tab-btn" data-tab="cookies">🍪 Cookie 列表</button>
+        </div>
+
+        <!-- Tab 内容区域 -->
+        <div class="tab-content">
+            <!-- 单个测试面板 -->
+            <div class="tab-panel active" id="tab-single">
+                <div class="panel-section">
+                    <h3>单个用户拉黑测试</h3>
+                    <div class="test-controls">
+                        <input type="text" id="testUserId" placeholder="输入用户ID" value="1042653845">
+                        <button id="blockBtn" class="btn btn-danger">拉黑</button>
+                        <button id="unblockBtn" class="btn btn-warning">取消拉黑</button>
+                    </div>
+                    <div id="testResult" class="test-result" style="display: none;">
+                        <button id="checkUserBtn" class="btn btn-primary" style="width: 100%; margin-top: 12px;">
+                            🔍 查看用户空间验证结果
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 批量操作面板 -->
+            <div class="tab-panel" id="tab-batch">
+                <div class="panel-section">
+                    <h3>批量拉黑操作</h3>
+                    <textarea id="urlInput" placeholder="粘贴空间链接列表，每行一个&#10;例如: https://space.bilibili.com/1042653845"></textarea>
+                    <div class="batch-controls">
+                        <button id="parseBtn" class="btn btn-primary">解析 UID</button>
+                        <button id="batchBlockBtn" class="btn btn-danger" disabled>批量拉黑</button>
+                        <button id="batchUnblockBtn" class="btn btn-warning" disabled>批量取消拉黑</button>
+                    </div>
+                    <div id="uidList" class="uid-list"></div>
+                    <div id="batchProgress" class="batch-progress"></div>
+                </div>
+            </div>
+
+            <!-- Cookie 列表面板 -->
+            <div class="tab-panel" id="tab-cookies">
+                <div class="panel-section">
+                    <div class="cookie-actions">
+                        <button id="refreshBtn" class="btn btn-primary">🔄 刷新</button>
+                        <button id="copyBtn" class="btn btn-secondary">📋 复制全部</button>
+                        <button id="exportBtn" class="btn btn-secondary">💾 导出 JSON</button>
+                    </div>
+                    <div class="table-container">
+                        <table id="cookieTable">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>值</th>
+                                    <th>域名</th>
+                                    <th>路径</th>
+                                    <th>HttpOnly</th>
+                                    <th>Secure</th>
+                                    <th>SameSite</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cookieTableBody">
+                                <!-- 动态生成 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 状态提示 -->
+        <div class="status" id="status"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
